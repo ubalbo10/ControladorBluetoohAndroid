@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SimpleBluetoothTerminal-master.iml" filepath="$PROJECT_DIR$/.idea/modules/SimpleBluetoothTerminal-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SimpleBluetoothTerminal-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SimpleBluetoothTerminal-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ControladorBluetoohAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/ControladorBluetoohAndroid.iml" group="ControladorBluetoohAndroid" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="ControladorBluetoohAndroid/app" />
     </modules>
   </component>
 </project>
