@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Simple Bluetooth Terminal</string>
     <string name="devices">Bluetooth Devices</string>
+    <string name="encender_1">encender 1</string>
+    <string name="apagar_1">apagar 1</string>
+    <string name="encender_2">encender 2</string>
+    <string name="apagar2">apagar2</string>
+    <string name="encender_3">encender 3</string>
+    <string name="apagar_3">apagar 3</string>
+    <string name="encender_4">encender 4</string>
+    <string name="apagar_4">Apagar 4</string>
+    <string name="encender_5">encender 5</string>
+    <string name="apagar_5">Apagar 5</string>
+    <string name="encender_6">encender 6</string>
+    <string name="apagar_6">Apagar 6</string>
 </resources>

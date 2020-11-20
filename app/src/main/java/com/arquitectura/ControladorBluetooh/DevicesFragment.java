@@ -1,4 +1,4 @@
-package de.kai_morich.simple_bluetooth_terminal;
+package com.arquitectura.ControladorBluetooh;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -110,7 +110,7 @@ public class DevicesFragment extends ListFragment {
         BluetoothDevice device = listItems.get(position-1);
         Bundle args = new Bundle();
         args.putString("device", device.getAddress());
-        Fragment fragment = new TerminalFragment();
+        Fragment fragment = new ControlPrincipalFragment();
         fragment.setArguments(args);
         getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
     }

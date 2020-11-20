@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="de.kai_morich.simple_bluetooth_terminal">
+    package="com.arquitectura.ControladorBluetooh">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity"
+            android:name="com.arquitectura.ControladorBluetooh.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".SerialService" />
+        <service android:name="com.arquitectura.ControladorBluetooh.SerialService" />
     </application>
 
 </manifest>
