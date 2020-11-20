@@ -8,6 +8,7 @@ android {
         vectorDrawables.useSupportLibrary true
 
         applicationId "de.kai_morich.simple_bluetooth_terminal"
+
         versionCode 1
         versionName "1.0"
     }
