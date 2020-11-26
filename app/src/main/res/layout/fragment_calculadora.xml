@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_titulo_calculadora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:text="Calculadora de consumo." />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tema_num_led"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:text="Numero De Luminarias:" />
+
+            <EditText
+                android:id="@+id/editText_num_leds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:hint="Ingrese el numero de iluminarias " />
+
+            <TextView
+                android:id="@+id/tema_num_Horas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_margin="10dp"
+                android:text="Tiempo que estaran funcionando :" />
+
+            <EditText
+                android:id="@+id/editText_numero_horas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:hint="Ingrese el tiempo en minutos " />
+
+            <Button
+                android:id="@+id/button_calculadora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Consultar" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/consulta"
+                android:src="@drawable/consulta"
+                app:srcCompat="@drawable/consulta" />
+
+            <TextView
+                android:id="@+id/texto_amostrar_encalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Su consumo con 5 luminarias encendidas en un periodo de 50 minutos es de 50 wats , lo cual equivale a un costo de $50   " />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -82,15 +82,12 @@ public class DevicesFragment extends ListFragment {
         int id = item.getItemId();
         if (id == R.id.item_menu_calculadora) {
             Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
-           // Fragment fragment = new ControlPrincipalFragment();
-           // fragment.setArguments(args);
-           // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+            Fragment fragment = new CalculadoraFragment();
+            getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
             return true;
         }
         if(id==R.id.item_menu_consumo){
-            // Fragment fragment = new ControlPrincipalFragment();
-            // fragment.setArguments(args);
-            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+
             Toast.makeText(getActivity(),"consumo presionado",Toast.LENGTH_LONG).show();
             return true;
         }
