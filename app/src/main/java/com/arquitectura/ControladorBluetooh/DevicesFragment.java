@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,6 +81,7 @@ public class DevicesFragment extends ListFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.item_menu_calculadora) {
+            Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
            // Fragment fragment = new ControlPrincipalFragment();
            // fragment.setArguments(args);
            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
@@ -89,7 +91,7 @@ public class DevicesFragment extends ListFragment {
             // Fragment fragment = new ControlPrincipalFragment();
             // fragment.setArguments(args);
             // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
-
+            Toast.makeText(getActivity(),"consumo presionado",Toast.LENGTH_LONG).show();
             return true;
         }
         else {
