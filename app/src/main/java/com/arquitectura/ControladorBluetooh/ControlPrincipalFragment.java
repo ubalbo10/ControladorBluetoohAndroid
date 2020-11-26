@@ -10,6 +10,9 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -147,6 +150,33 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
         return view;
     }
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_principal, menu);
+        menu.findItem(R.id.item_menu_calculadora).setChecked(hexEnabled);
+        menu.findItem(R.id.item_menu_consumo).setChecked(hexEnabled);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.item_menu_consumo) {
+            // Fragment fragment = new ControlPrincipalFragment();
+            // fragment.setArguments(args);
+            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+
+            return true;
+        } else if (id == R.id.item_menu_calculadora) {
+            // Fragment fragment = new ControlPrincipalFragment();
+            // fragment.setArguments(args);
+            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+
+            return true;
+        }  else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
 
     /*
      * Serial + UI
