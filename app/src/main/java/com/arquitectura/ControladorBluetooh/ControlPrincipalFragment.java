@@ -28,7 +28,7 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     private String deviceAddress;
     private SerialService service;
 
-
+ //agregado
     private Connected connected = Connected.False;
     private boolean initialStart = true;
     private boolean hexEnabled = false;
