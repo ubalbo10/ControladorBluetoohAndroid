@@ -21,6 +21,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.Date;
+
 public class ControlPrincipalFragment extends Fragment implements ServiceConnection, /*esta es la interface que creamos*/ SerialListener {
 
     private enum Connected { False, Pending, True }
@@ -33,6 +35,36 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     private boolean initialStart = true;
     private boolean hexEnabled = false;
     private String newline = TextUtil.newline_crlf;
+
+    //variables para calcular consumo real
+    static int contLum1;
+    static int horaInicioLum1;
+    static int horaFinLum1;
+
+    static int contLum2;
+    static int horaInicioLum2;
+    static int horaFinLum2;
+
+    static int contLum3;
+    static int horaInicioLum3;
+    static int horaFinLum3;
+
+    static int contLum4;
+    static int horaInicioLum4;
+    static int horaFinLum4;
+
+    static int contLum5;
+    static int horaInicioLum5;
+    static int horaFinLum5;
+
+    static int contLum6;
+    static int horaInicioLum6;
+    static int horaFinLum6;
+
+    static int conTotal;
+
+    Date horainicio;
+    Date horaFin;
 
     /*
      * Lifecycle
@@ -131,18 +163,117 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
 
         //al pulsar los botones
         btn1.setOnClickListener(v -> send("1"));
-        btn1apagado.setOnClickListener(v -> send("2"));
-        btn2.setOnClickListener(v -> send("3"));
-        btn2apagado.setOnClickListener(v -> send("4"));
-        btn3.setOnClickListener(v -> send("5"));
-        btn3apagado.setOnClickListener(v -> send("6"));
-        btn4.setOnClickListener(v -> send("7"));
-        btn4apagado.setOnClickListener(v -> send("8"));
-        btn5.setOnClickListener(v -> send("A"));
-        btn5apagado.setOnClickListener(v -> send("B"));
-        btn6.setOnClickListener(v -> send("C"));
-        btn6apagado.setOnClickListener(v -> send("D"));
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum1= horainicio.getMinutes();
+            }
+        });
 
+        btn1apagado.setOnClickListener(v -> send("2"));
+        btn1apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum1=horaFin.getMinutes();
+                contLum1=horaFinLum1-horaInicioLum1;
+            }
+        });
+        btn2.setOnClickListener(v -> send("3"));
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum2= horainicio.getMinutes();
+            }
+        });
+
+        btn2apagado.setOnClickListener(v -> send("4"));
+        btn2apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum2=horaFin.getMinutes();
+                contLum2=horaFinLum1-horaInicioLum1;
+            }
+        });
+
+        btn3.setOnClickListener(v -> send("5"));
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum3= horainicio.getMinutes();
+            }
+        });
+
+        btn3apagado.setOnClickListener(v -> send("6"));
+        btn3apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum3=horaFin.getMinutes();
+                contLum3=horaFinLum1-horaInicioLum1;
+            }
+        });
+
+        btn4.setOnClickListener(v -> send("7"));
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum4= horainicio.getMinutes();
+            }
+        });
+
+        btn4apagado.setOnClickListener(v -> send("8"));
+        btn4apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum4=horaFin.getMinutes();
+                contLum4=horaFinLum1-horaInicioLum1;
+            }
+        });
+
+        btn5.setOnClickListener(v -> send("A"));
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum5= horainicio.getMinutes();
+            }
+        });
+
+        btn5apagado.setOnClickListener(v -> send("B"));
+        btn5apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum5=horaFin.getMinutes();
+                contLum5=horaFinLum1-horaInicioLum1;
+            }
+        });
+
+        btn6.setOnClickListener(v -> send("C"));
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horainicio=new Date();
+                horaInicioLum6= horainicio.getMinutes();
+            }
+        });
+
+        btn6apagado.setOnClickListener(v -> send("D"));
+        btn6apagado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horaFin=new Date();
+                horaFinLum6=horaFin.getMinutes();
+                contLum6=horaFinLum1-horaInicioLum1;
+            }
+        });
 
 
 
@@ -162,9 +293,9 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
         int id = item.getItemId();
         if (id == R.id.item_menu_consumo) {
             Toast.makeText(getActivity(),"consumo",Toast.LENGTH_LONG).show();
-            // Fragment fragment = new ControlPrincipalFragment();
+            Fragment fragment = new Fragment_consumo();
             // fragment.setArguments(args);
-            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+            getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
 
             return true;
         } else if (id == R.id.item_menu_calculadora) {

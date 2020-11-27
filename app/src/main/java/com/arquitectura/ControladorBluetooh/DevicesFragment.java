@@ -89,6 +89,8 @@ public class DevicesFragment extends ListFragment {
         if(id==R.id.item_menu_consumo){
 
             Toast.makeText(getActivity(),"consumo presionado",Toast.LENGTH_LONG).show();
+            Fragment fragment = new Fragment_consumo();
+            getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
             return true;
         }
         else {
