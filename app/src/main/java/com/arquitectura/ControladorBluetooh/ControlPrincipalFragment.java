@@ -305,14 +305,14 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.item_menu_consumo) {
-            Toast.makeText(getActivity(),"consumo",Toast.LENGTH_LONG).show();
+           // Toast.makeText(getActivity(),"consumo",Toast.LENGTH_LONG).show();
             Fragment fragment = new Fragment_consumo();
             // fragment.setArguments(args);
             getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
 
             return true;
         } else if (id == R.id.item_menu_calculadora) {
-            Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
+           // Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
              Fragment fragment = new CalculadoraFragment();
             // fragment.setArguments(args);
              getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
@@ -355,14 +355,14 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             String msg;
             byte[] data;
             if(hexEnabled) {
-                Toast.makeText(getActivity(),"sime ejecuto",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity(),"sime ejecuto",Toast.LENGTH_LONG).show();
                 StringBuilder sb = new StringBuilder();
                 TextUtil.toHexString(sb, TextUtil.fromHexString(str));
                 TextUtil.toHexString(sb, newline.getBytes());
                 msg = sb.toString();
                 data = TextUtil.fromHexString(msg);
             } else {
-                Toast.makeText(getActivity(),"sime ejecuto",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity(),"sime ejecuto",Toast.LENGTH_LONG).show();
                 msg = str;
                 data = (str + newline).getBytes();
             }
