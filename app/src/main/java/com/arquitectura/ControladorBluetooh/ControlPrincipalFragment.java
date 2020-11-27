@@ -32,7 +32,6 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     private Connected connected = Connected.False;
     private boolean initialStart = true;
     private boolean hexEnabled = false;
-    private boolean pendingNewline = false;
     private String newline = TextUtil.newline_crlf;
 
     /*
@@ -162,15 +161,17 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.item_menu_consumo) {
+            Toast.makeText(getActivity(),"consumo",Toast.LENGTH_LONG).show();
             // Fragment fragment = new ControlPrincipalFragment();
             // fragment.setArguments(args);
             // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
 
             return true;
         } else if (id == R.id.item_menu_calculadora) {
-            // Fragment fragment = new ControlPrincipalFragment();
+            Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
+             Fragment fragment = new CalculadoraFragment();
             // fragment.setArguments(args);
-            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+             getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
 
             return true;
         }  else {

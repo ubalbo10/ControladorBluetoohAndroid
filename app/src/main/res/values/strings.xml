@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple Bluetooth Terminal</string>
+    <string name="app_name">Controlador Bluetooth </string>
     <string name="devices">Bluetooth Devices</string>
     <string name="encender_1">encender 1</string>
     <string name="apagar_1">apagar 1</string>
@@ -13,4 +13,6 @@
     <string name="apagar_5">Apagar 5</string>
     <string name="encender_6">encender 6</string>
     <string name="apagar_6">Apagar 6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
