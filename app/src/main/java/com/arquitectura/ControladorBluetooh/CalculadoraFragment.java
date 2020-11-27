@@ -32,8 +32,9 @@ public class CalculadoraFragment extends Fragment {
     TextView textoMostrar;
     String num_luminarias;
     String num_minutos;
-    double consumoEnWatsPorminuto=(20.0/60);
+    double consumoEnWatsPorminuto=(100.0/60);
     double consumoEnDineroPorHora=(0.20/1000);
+    String mensaje;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -102,13 +103,23 @@ public class CalculadoraFragment extends Fragment {
                     int minutosInt=Integer.parseInt(num_minutos);
                     double consumoenwats;
                     double consumoendolares;
+
                     //formula
                     consumoenwats=((luminariasInt*minutosInt)*consumoEnWatsPorminuto);
                     consumoendolares=consumoenwats*consumoEnDineroPorHora;
-                    //texto a mostrar
-                    String mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
-                            " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
-                            "  Lo cual equivale a $"+ df.format(consumoendolares);
+                    if(consumoenwats>=1000.00){
+                        consumoenwats=consumoenwats/1000;
+                        mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
+                                " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
+                                "  Lo cual equivale a $"+ df.format(consumoendolares);
+
+                    }else{
+                        //texto a mostrar
+                        mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
+                                " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
+                                "  Lo cual equivale a $"+ df.format(consumoendolares);
+
+                    }
                     textoMostrar.setText(mensaje);
                     imagen.setVisibility(View.VISIBLE);
                     textoMostrar.setVisibility(View.VISIBLE);
