@@ -162,9 +162,9 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
         int id = item.getItemId();
         if (id == R.id.item_menu_consumo) {
             Toast.makeText(getActivity(),"consumo",Toast.LENGTH_LONG).show();
-            // Fragment fragment = new ControlPrincipalFragment();
+             //Fragment fragment = new ControlPrincipalFragment();
             // fragment.setArguments(args);
-            // getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
+             //getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
 
             return true;
         } else if (id == R.id.item_menu_calculadora) {

@@ -33,7 +33,7 @@ public class CalculadoraFragment extends Fragment {
     String num_luminarias;
     String num_minutos;
     double consumoEnWatsPorminuto=(20.0/60);
-    double consumoEnDineroPorHora=1.25;
+    double consumoEnDineroPorHora=(0.20/1000);
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -108,7 +108,7 @@ public class CalculadoraFragment extends Fragment {
                     //texto a mostrar
                     String mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
                             " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
-                            ", Lo cual equivale a $"+ df.format(consumoendolares);
+                            "  Lo cual equivale a $"+ df.format(consumoendolares);
                     textoMostrar.setText(mensaje);
                     imagen.setVisibility(View.VISIBLE);
                     textoMostrar.setVisibility(View.VISIBLE);
