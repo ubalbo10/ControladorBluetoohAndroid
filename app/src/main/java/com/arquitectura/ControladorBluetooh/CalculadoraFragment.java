@@ -103,7 +103,6 @@ public class CalculadoraFragment extends Fragment {
                     int minutosInt=Integer.parseInt(num_minutos);
                     double consumoenwats;
                     double consumoendolares;
-
                     //formula
                     consumoenwats=((luminariasInt*minutosInt)*consumoEnWatsPorminuto);
                     consumoendolares=consumoenwats*consumoEnDineroPorHora;
@@ -111,15 +110,14 @@ public class CalculadoraFragment extends Fragment {
                         consumoenwats=consumoenwats/1000;
                         mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
                                 " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
-                                "  Lo cual equivale a $"+ df.format(consumoendolares);
-
+                                "KW, Lo cual equivale a $"+ df.format(consumoendolares);
                     }else{
-                        //texto a mostrar
                         mensaje="Si mantiene encendidas: "+num_luminarias +" luminarias, En un periodo de "+num_minutos+
                                 " minutos, Su consumo en wats seria de :"+ df.format(consumoenwats)+
-                                "  Lo cual equivale a $"+ df.format(consumoendolares);
+                                "W, Lo cual equivale a $"+ df.format(consumoendolares);
 
                     }
+                    //texto a mostrar
                     textoMostrar.setText(mensaje);
                     imagen.setVisibility(View.VISIBLE);
                     textoMostrar.setVisibility(View.VISIBLE);

@@ -81,14 +81,16 @@ public class DevicesFragment extends ListFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.item_menu_calculadora) {
-            Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),"calculadora",Toast.LENGTH_LONG).show();
             Fragment fragment = new CalculadoraFragment();
             getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
             return true;
         }
         if(id==R.id.item_menu_consumo){
 
-            Toast.makeText(getActivity(),"consumo presionado",Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),"consumo presionado",Toast.LENGTH_LONG).show();
+            Fragment fragment = new Fragment_consumo();
+            getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
             return true;
         }
         else {
