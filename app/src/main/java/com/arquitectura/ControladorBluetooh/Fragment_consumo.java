@@ -51,16 +51,16 @@ public class Fragment_consumo extends Fragment {
         texto7=vista.findViewById(R.id.textView14);
 
 
-        texto1.setText(Double.toString((contLum1*20))+" Watts "+Double.toString((contLum1*20*2)/10000)+" Dolares "+Double.toString((contLum1))+" Horas");
-        texto2.setText(Double.toString((contLum2*20))+" Watts "+Double.toString((contLum2*20*2)/10000)+" Dolares "+Double.toString((contLum2))+" Horas");
-        texto3.setText(Double.toString((contLum3*20))+" Watts "+Double.toString((contLum3*20*2)/10000)+" Dolares "+Double.toString((contLum3))+" Horas");
-        texto4.setText(Double.toString((contLum4*20))+" Watts "+Double.toString((contLum4*20*2)/10000)+" Dolares "+Double.toString((contLum4))+" Horas");
-        texto5.setText(Double.toString((contLum5*20))+" Watts "+Double.toString((contLum5*20*2)/10000)+" Dolares "+Double.toString((contLum5))+" Horas");
-        texto6.setText(Double.toString((contLum6*20))+" Watts "+Double.toString((contLum6*20*2)/10000)+" Dolares "+Double.toString((contLum6))+" Horas");
+        texto1.setText(Double.toString((contLum1*100))+" Watts - "+Double.toString((contLum1*100*2)/10000)+" Dolares - "+Double.toString((contLum1))+" Horas");
+        texto2.setText(Double.toString((contLum2*100))+" Watts - "+Double.toString((contLum2*100*2)/10000)+" Dolares - "+Double.toString((contLum2))+" Horas");
+        texto3.setText(Double.toString((contLum3*100))+" Watts - "+Double.toString((contLum3*100*2)/10000)+" Dolares - "+Double.toString((contLum3))+" Horas");
+        texto4.setText(Double.toString((contLum4*100))+" Watts - "+Double.toString((contLum4*100*2)/10000)+" Dolares - "+Double.toString((contLum4))+" Horas");
+        texto5.setText(Double.toString((contLum5*100))+" Watts - "+Double.toString((contLum5*100*2)/10000)+" Dolares - "+Double.toString((contLum5))+" Horas");
+        texto6.setText(Double.toString((contLum6*100))+" Watts - "+Double.toString((contLum6*100*2)/10000)+" Dolares - "+Double.toString((contLum6))+" Horas");
 
         Double total=contLum1+contLum2+contLum3+contLum4+contLum5+contLum6;
 
-        texto7.setText(Double.toString((total*20))+" Watts "+Double.toString((total*20*2)/10000)+" Dolares "+Double.toString((total))+" Horas");
+        texto7.setText(Double.toString((total*100))+" Watts - "+Double.toString((total*100*2)/10000)+" Dolares - "+Double.toString((total))+" Horas");
 
         return vista;
 
