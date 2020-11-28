@@ -51,16 +51,16 @@ public class Fragment_consumo extends Fragment {
         texto7=vista.findViewById(R.id.textView14);
 
 
-        texto1.setText(Integer.toString((contLum1*20))+" Watts "+Integer.toString((contLum1*20*2)/10000)+"Dolares");
-        texto2.setText(Integer.toString((contLum2*20))+" Watts "+Integer.toString((contLum2*20*2)/10000)+"Dolares");
-        texto3.setText(Integer.toString((contLum3*20))+" Watts "+Integer.toString((contLum3*20*2)/10000)+"Dolares");
-        texto4.setText(Integer.toString((contLum4*20))+" Watts "+Integer.toString((contLum4*20*2)/10000)+"Dolares");
-        texto5.setText(Integer.toString((contLum5*20))+" Watts "+Integer.toString((contLum5*20*2)/10000)+"Dolares");
-        texto6.setText(Integer.toString((contLum6*20))+" Watts "+Integer.toString((contLum6*20*2)/10000)+"Dolares");
+        texto1.setText(Double.toString((contLum1*20))+" Watts "+Double.toString((contLum1*20*2)/10000)+" Dolares "+Double.toString((contLum1))+" Horas");
+        texto2.setText(Double.toString((contLum2*20))+" Watts "+Double.toString((contLum2*20*2)/10000)+" Dolares "+Double.toString((contLum2))+" Horas");
+        texto3.setText(Double.toString((contLum3*20))+" Watts "+Double.toString((contLum3*20*2)/10000)+" Dolares "+Double.toString((contLum3))+" Horas");
+        texto4.setText(Double.toString((contLum4*20))+" Watts "+Double.toString((contLum4*20*2)/10000)+" Dolares "+Double.toString((contLum4))+" Horas");
+        texto5.setText(Double.toString((contLum5*20))+" Watts "+Double.toString((contLum5*20*2)/10000)+" Dolares "+Double.toString((contLum5))+" Horas");
+        texto6.setText(Double.toString((contLum6*20))+" Watts "+Double.toString((contLum6*20*2)/10000)+" Dolares "+Double.toString((contLum6))+" Horas");
 
-        int total=contLum1+contLum2+contLum3+contLum4+contLum5+contLum6;
+        Double total=contLum1+contLum2+contLum3+contLum4+contLum5+contLum6;
 
-        texto7.setText(Integer.toString((total*20))+" Watts "+Integer.toString((total*20*2)/10000)+"Dolares");
+        texto7.setText(Double.toString((total*20))+" Watts "+Double.toString((total*20*2)/10000)+" Dolares "+Double.toString((total))+" Horas");
 
         return vista;
 

@@ -8,90 +8,169 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:background="@drawable/consumo"
         android:orientation="vertical">
-
         <TextView
             android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="SIMULADOR DE CONSUMO" />
+
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 1" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 1" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 2" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 2" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 3" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 3" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 4" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 4" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 5" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 5" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Consumo Luminaria 6" />
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
+            android:text="LUMINARIA 6" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="Consumo Total de Luminarias" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textSize="15dp"
             android:text="" />
 
 

@@ -37,34 +37,42 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
     private String newline = TextUtil.newline_crlf;
 
     //variables para calcular consumo real
-    static int contLum1;
+    static double contLum1;
     static int horaInicioLum1;
     static int horaFinLum1;
+    Date horainicio1;
+    Date horaFin1;
 
-    static int contLum2;
+    static double contLum2;
     static int horaInicioLum2;
     static int horaFinLum2;
+    Date horainicio2;
+    Date horaFin2;
 
-    static int contLum3;
+    static double contLum3;
     static int horaInicioLum3;
     static int horaFinLum3;
+    Date horainicio3;
+    Date horaFin3;
 
-    static int contLum4;
+    static double contLum4;
     static int horaInicioLum4;
     static int horaFinLum4;
+    Date horainicio4;
+    Date horaFin4;
 
-    static int contLum5;
+    static double contLum5;
     static int horaInicioLum5;
     static int horaFinLum5;
+    Date horainicio5;
+    Date horaFin5;
 
-    static int contLum6;
+    static double contLum6;
     static int horaInicioLum6;
     static int horaFinLum6;
+    Date horainicio6;
+    Date horaFin6;
 
-    static int conTotal;
-
-    Date horainicio;
-    Date horaFin;
 
     /*
      * Lifecycle
@@ -161,14 +169,24 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
         View btn6 = view.findViewById(R.id.button11);
         View btn6apagado = view.findViewById(R.id.button12);
 
+        //iniciamos con los botones de apagado presionados.
+        btn1apagado.setBackgroundResource(R.drawable.transparente1);
+        btn2apagado.setBackgroundResource(R.drawable.transparente1);
+        btn3apagado.setBackgroundResource(R.drawable.transparente1);
+        btn4apagado.setBackgroundResource(R.drawable.transparente1);
+        btn5apagado.setBackgroundResource(R.drawable.transparente1);
+        btn6apagado.setBackgroundResource(R.drawable.transparente1);
+
         //al pulsar los botones
         //btn1.setOnClickListener(v -> send("1"));
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 send("1");
-                horainicio=new Date();
-                horaInicioLum1= horainicio.getMinutes();
+                horainicio1=new Date();
+                horaInicioLum1=horainicio1.getMinutes();
+                btn1.setBackgroundResource(R.drawable.transparente1);
+                btn1apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -178,9 +196,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             public void onClick(View v) {
                 send("2");
 
-                horaFin=new Date();
-                horaFinLum1=horaFin.getMinutes();
-                contLum1=horaFinLum1-horaInicioLum1;
+                horaFin1=new Date();
+                horaFinLum1=horaFin1.getMinutes();
+                contLum1=contLum1+(horaFinLum1-horaInicioLum1);
+                btn1.setBackgroundResource(R.drawable.transparente);
+                btn1apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
         //btn2.setOnClickListener(v -> send("3"));
@@ -188,8 +208,10 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("3");
-                horainicio=new Date();
-                horaInicioLum2= horainicio.getMinutes();
+                horainicio2=new Date();
+                horaInicioLum2= horainicio2.getMinutes();
+                btn2.setBackgroundResource(R.drawable.transparente1);
+                btn2apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -198,9 +220,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("4");
-                horaFin=new Date();
-                horaFinLum2=horaFin.getMinutes();
-                contLum2=horaFinLum1-horaInicioLum1;
+                horaFin2=new Date();
+                horaFinLum2=horaFin2.getMinutes();
+                contLum2=contLum2 + (horaFinLum2-horaInicioLum2);
+                btn2.setBackgroundResource(R.drawable.transparente);
+                btn2apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
 
@@ -209,8 +233,10 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("5");
-                horainicio=new Date();
-                horaInicioLum3= horainicio.getMinutes();
+                horainicio3=new Date();
+                horaInicioLum3= horainicio3.getMinutes();
+                btn3.setBackgroundResource(R.drawable.transparente1);
+                btn3apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -219,9 +245,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("6");
-                horaFin=new Date();
-                horaFinLum3=horaFin.getMinutes();
-                contLum3=horaFinLum1-horaInicioLum1;
+                horaFin3=new Date();
+                horaFinLum3=horaFin3.getMinutes();
+                contLum3=contLum3 + (horaFinLum3-horaInicioLum3);
+                btn3.setBackgroundResource(R.drawable.transparente);
+                btn3apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
 
@@ -230,8 +258,10 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("7");
-                horainicio=new Date();
-                horaInicioLum4= horainicio.getMinutes();
+                horainicio4=new Date();
+                horaInicioLum4= horainicio4.getMinutes();
+                btn4.setBackgroundResource(R.drawable.transparente1);
+                btn4apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -240,9 +270,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("8");
-                horaFin=new Date();
-                horaFinLum4=horaFin.getMinutes();
-                contLum4=horaFinLum1-horaInicioLum1;
+                horaFin4=new Date();
+                horaFinLum4=horaFin4.getMinutes();
+                contLum4=contLum4 + (horaFinLum4-horaInicioLum4);
+                btn4.setBackgroundResource(R.drawable.transparente);
+                btn4apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
 
@@ -251,8 +283,10 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("A");
-                horainicio=new Date();
-                horaInicioLum5= horainicio.getMinutes();
+                horainicio5=new Date();
+                horaInicioLum5= horainicio5.getMinutes();
+                btn5.setBackgroundResource(R.drawable.transparente1);
+                btn5apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -261,9 +295,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("B");
-                horaFin=new Date();
-                horaFinLum5=horaFin.getMinutes();
-                contLum5=horaFinLum1-horaInicioLum1;
+                horaFin5=new Date();
+                horaFinLum5=horaFin5.getMinutes();
+                contLum5=contLum5 + (horaFinLum5-horaInicioLum5);
+                btn5.setBackgroundResource(R.drawable.transparente);
+                btn5apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
 
@@ -272,8 +308,10 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("C");
-                horainicio=new Date();
-                horaInicioLum6= horainicio.getMinutes();
+                horainicio6=new Date();
+                horaInicioLum6= horainicio6.getMinutes();
+                btn6.setBackgroundResource(R.drawable.transparente1);
+                btn6apagado.setBackgroundResource(R.drawable.transparente);
             }
         });
 
@@ -282,9 +320,11 @@ public class ControlPrincipalFragment extends Fragment implements ServiceConnect
             @Override
             public void onClick(View v) {
                 send("D");
-                horaFin=new Date();
-                horaFinLum6=horaFin.getMinutes();
-                contLum6=horaFinLum1-horaInicioLum1;
+                horaFin6=new Date();
+                horaFinLum6=horaFin6.getMinutes();
+                contLum6=contLum6 + (horaFinLum6-horaInicioLum6);
+                btn6.setBackgroundResource(R.drawable.transparente);
+                btn6apagado.setBackgroundResource(R.drawable.transparente1);
             }
         });
 
